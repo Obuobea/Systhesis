@@ -1,0 +1,290 @@
+```css
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b28b70;
+}
+
+/* Home Section */
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.05)
+        ),
+        
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #b28b70;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #b28b70;
+}
+
+/* Section Headings */
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #777777;
+}
+
+/* Explore Styles */
+.styles-section {
+    padding: 90px 8%;
+}
+
+.style-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.style-card {
+    text-align: center;
+}
+
+.style-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.style-card img:hover {
+    transform: scale(1.03);
+}
+
+.style-card h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.style-card p {
+    color:#777777;
+    font-size: 14px;
+}
+
+/* Outfit Inspiration */
+.inspiration-section {
+    padding: 80px 8%;
+    background-color:#f7f3ef;
+}
+
+.inspiration-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.inspiration-content img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.inspiration-text h3 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.inspiration-text p {
+    color:#666666;
+    margin-bottom: 20px;
+}
+
+/* Fashion Tips */
+.tips-section {
+    padding: 90px 8%;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tip-card {
+    padding: 30px;
+    background-color:#f7f3ef;
+}
+
+.tip-card span {
+    color:#b28b70;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.tip-card h3 {
+    margin: 15px 0;
+}
+
+.tip-card p {
+    color:#666666;
+    font-size: 14px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color:#222222;
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact-section > p:not(.subtitle) {
+    margin-bottom: 25px;
+    color:#dddddd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color:#111111;
+    color:#cccccc;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 7%;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .style-container,
+    .tips-container,
+    .inspiration-content {
+        grid-template-columns: 1fr;
+    }
+
+    .style-card img {
+        height: 400px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .inspiration-text h3,
+    .contact-section h2 {
+        font-size: 28px;
+    }
+}
+```
